@@ -1,0 +1,12 @@
+# Robots.txt - Adriana Tortosa Microblading
+# https://adrianatortosa.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://adrianatortosa.com/sitemap.xml
+
+# Crawl-delay (opcional)
+Crawl-delay: 1
+
