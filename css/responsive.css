@@ -5,10 +5,6 @@
 
 /* ========== LARGE DESKTOP (1200px+) ========== */
 @media (min-width: 1200px) {
-    .hero__title {
-        font-size: var(--text-7xl);
-    }
-    
     .services__grid {
         gap: var(--space-8);
     }

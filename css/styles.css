@@ -376,6 +376,25 @@ strong {
 .hero__title {
     color: var(--color-white);
     margin-bottom: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: -0.015em;
+}
+
+.hero__title-main {
+    display: block;
+    font-size: clamp(var(--text-5xl), 10vw, var(--text-8xl));
+    font-weight: var(--font-semibold);
+    line-height: 0.85;
+}
+
+.hero__title-accent {
+    display: block;
+    font-size: clamp(var(--text-4xl), 7.5vw, var(--text-7xl));
+    font-weight: var(--font-semibold);
+    font-style: italic;
+    line-height: 1.1;
 }
 
 .hero__description {
