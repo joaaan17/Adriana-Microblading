@@ -127,36 +127,23 @@ if (backToTop) {
 function initSwiper() {
     if (typeof Swiper !== 'undefined') {
         new Swiper('.portfolio-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: false,
             loop: true,
+            speed: 600,
             autoplay: {
-                delay: 4000,
+                delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                480: {
-                    slidesPerView: 2,
-                    centeredSlides: false,
-                },
                 768: {
-                    slidesPerView: 3,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                    centeredSlides: false,
+                    spaceBetween: 20,
                 },
             },
         });

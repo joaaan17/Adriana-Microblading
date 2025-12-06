@@ -197,8 +197,8 @@
     }
     
     /* Portfolio */
-    .portfolio-swiper .swiper-slide {
-        width: 280px;
+    .portfolio-swiper {
+        height: 400px;
     }
     
     .swiper-button-prev,
@@ -291,8 +291,8 @@
     }
     
     /* Portfolio */
-    .portfolio-swiper .swiper-slide {
-        width: 260px;
+    .portfolio-swiper {
+        height: 320px;
     }
     
     /* Contact */

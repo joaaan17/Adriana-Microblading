@@ -687,45 +687,32 @@ strong {
 }
 
 .portfolio-swiper {
-    padding: var(--space-4) 0 var(--space-12);
+    height: 500px;
+    padding: 0 var(--space-2);
+}
+
+.portfolio-swiper .swiper-slide {
+    width: auto;
+    height: 100%;
 }
 
 .portfolio__item {
     display: block;
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius-lg);
-    aspect-ratio: 1;
+    height: 100%;
+    border-radius: var(--radius-sm);
 }
 
 .portfolio__item img {
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow) var(--ease-out-expo);
 }
 
 .portfolio__item:hover img {
-    transform: scale(1.1);
-}
-
-.portfolio__item-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity var(--transition-base);
-}
-
-.portfolio__item:hover .portfolio__item-overlay {
-    opacity: 1;
-}
-
-.portfolio__item-overlay svg {
-    color: var(--color-white);
+    transform: scale(1.05);
 }
 
 .portfolio__cta {
@@ -755,19 +742,6 @@ strong {
 .swiper-button-next::after {
     font-size: 18px !important;
     font-weight: bold;
-}
-
-.swiper-pagination-bullet {
-    background: var(--color-white) !important;
-    opacity: 0.3;
-    width: 10px;
-    height: 10px;
-}
-
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    width: 30px;
-    border-radius: var(--radius-full);
 }
 
 /* ========== CONTACT SECTION ========== */
