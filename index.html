@@ -33,7 +33,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -76,47 +76,53 @@
     ============================================= -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#home" class="nav__logo">
-                <span class="logo-text">Adriana Tortosa</span>
-            </a>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active">Inicio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">Quién Soy</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Servicios</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#method" class="nav__link">Mi Método</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">Portfolio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link nav__link--cta">Contacto</a>
-                    </li>
-                </ul>
-                
-                <button class="nav__close" id="nav-close">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            
-            <button class="nav__toggle" id="nav-toggle">
+            <!-- Menú hamburguesa (izquierda) -->
+            <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
+            
+            <!-- Logo centrado -->
+            <a href="#home" class="nav__logo">
+                <span class="logo-text">Adriana Tortosa</span>
+            </a>
+            
+            <!-- Botón Contacta (derecha) -->
+            <a href="#contact" class="nav__cta">Contacta</a>
+            
+            <!-- Menú fullscreen -->
+            <div class="nav__menu" id="nav-menu">
+                <button class="nav__close" id="nav-close" aria-label="Cerrar menú">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Quién soy</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">Servicios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#method" class="nav__link">Mi método</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -350,20 +356,18 @@
              MI MÉTODO
         ============================================= -->
         <section class="method section" id="method">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <span class="section__subtitle">El proceso</span>
-                    <h2 class="section__title">Mi Método</h2>
-                    <p class="section__description">
-                        Un proceso cuidadoso y personalizado para garantizar los mejores resultados
-                    </p>
+            <div class="method__container">
+                <div class="method__header">
+                    <span class="method__subtitle">El proceso</span>
+                    <h2 class="method__title">3 Pasos Simples</h2>
                 </div>
                 
                 <div class="method__timeline">
                     <!-- Paso 1 -->
-                    <div class="method__step" data-aos="fade-up" data-aos-delay="100">
-                        <div class="method__step-number glass-card-dark">01</div>
-                        <div class="method__step-content glass-card">
+                    <div class="method__step">
+                        <div class="method__step-number">01</div>
+                        <div class="method__step-connector"></div>
+                        <div class="method__step-content">
                             <h3 class="method__step-title">Consulta Inicial</h3>
                             <p class="method__step-description">
                                 Analizamos tu rostro, estilo y expectativas. Resolvemos todas tus 
@@ -373,9 +377,10 @@
                     </div>
                     
                     <!-- Paso 2 -->
-                    <div class="method__step" data-aos="fade-up" data-aos-delay="200">
-                        <div class="method__step-number glass-card-dark">02</div>
-                        <div class="method__step-content glass-card">
+                    <div class="method__step">
+                        <div class="method__step-number">02</div>
+                        <div class="method__step-connector"></div>
+                        <div class="method__step-content">
                             <h3 class="method__step-title">Diseño Personalizado</h3>
                             <p class="method__step-description">
                                 Creo el diseño perfecto según tus facciones, aplicando la proporción 
@@ -385,37 +390,13 @@
                     </div>
                     
                     <!-- Paso 3 -->
-                    <div class="method__step" data-aos="fade-up" data-aos-delay="300">
-                        <div class="method__step-number glass-card-dark">03</div>
-                        <div class="method__step-content glass-card">
+                    <div class="method__step">
+                        <div class="method__step-number">03</div>
+                        <div class="method__step-content">
                             <h3 class="method__step-title">Procedimiento</h3>
                             <p class="method__step-description">
                                 Con anestesia tópica para tu comodidad, realizo el tratamiento con 
                                 precisión milimétrica y productos de máxima calidad.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Paso 4 -->
-                    <div class="method__step" data-aos="fade-up" data-aos-delay="400">
-                        <div class="method__step-number glass-card-dark">04</div>
-                        <div class="method__step-content glass-card">
-                            <h3 class="method__step-title">Cuidados Posteriores</h3>
-                            <p class="method__step-description">
-                                Te proporciono todas las instrucciones y productos necesarios para 
-                                una cicatrización óptima y resultados duraderos.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Paso 5 -->
-                    <div class="method__step" data-aos="fade-up" data-aos-delay="500">
-                        <div class="method__step-number glass-card-dark">05</div>
-                        <div class="method__step-content glass-card">
-                            <h3 class="method__step-title">Retoque Incluido</h3>
-                            <p class="method__step-description">
-                                A las 4-6 semanas realizamos un retoque de perfeccionamiento 
-                                incluido en el precio para asegurar un resultado impecable.
                             </p>
                         </div>
                     </div>
@@ -643,33 +624,25 @@
     ============================================= -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <span class="footer__logo">Adriana Tortosa</span>
-                    <p class="footer__tagline">Especialista en Microblading</p>
-                </div>
-                
-                <nav class="footer__nav">
-                    <a href="#home" class="footer__link">Inicio</a>
-                    <a href="#about" class="footer__link">Quién Soy</a>
-                    <a href="#services" class="footer__link">Servicios</a>
-                    <a href="#contact" class="footer__link">Contacto</a>
-                </nav>
-                
-                <div class="footer__social">
-                    <a href="https://www.instagram.com/adrianatortosa_microstudio/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="footer__main">
+                <h2 class="footer__title">Adriana Tortosa</h2>
             </div>
             
             <div class="footer__bottom">
+                <div class="footer__buttons">
+                    <a href="mailto:info@adrianatortosa.com" class="footer__button" aria-label="Email">
+                        Email
+                    </a>
+                    <a href="https://www.instagram.com/adrianatortosa_microstudio/" target="_blank" rel="noopener" class="footer__button" aria-label="Instagram">
+                        Instagram
+                    </a>
+                    <a href="https://wa.me/34600000000" target="_blank" rel="noopener" class="footer__button" aria-label="WhatsApp">
+                        Whatsapp
+                    </a>
+                </div>
+                
                 <p class="footer__copyright">
-                    © <span id="current-year"></span> Adriana Tortosa. Todos los derechos reservados.
+                    © 2025
                 </p>
             </div>
         </div>
